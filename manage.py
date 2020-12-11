@@ -1,9 +1,8 @@
 #!/usr/bin/env python
 """Django's command-line utility for administrative tasks."""
 import os
-import sys
 import re
-
+import sys
 
 
 def read_env():
@@ -24,8 +23,6 @@ def read_env():
             if m3:
                 val = re.sub(r'\\(.)', r'\1', m3.group(1))
             os.environ.setdefault(key, val)
-
-
 
 def main():
     """Run administrative tasks."""
