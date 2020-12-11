@@ -1,0 +1,17 @@
+body {
+    background-color: lightcoral;
+}
+
+nav {
+    opacity: 0.8;
+}
+
+nav ul {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.section-1 {
+    height: 100vw;
+    max-height: 100vw;
+}
