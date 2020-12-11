@@ -1,6 +1,3 @@
-.body{
-    
-}
 .container-login{
     background-color: #938adf; 
     position: absolute;
@@ -76,55 +73,4 @@
     background-image: url('/static/icon/ShieldLogo.png');
     background-size: contain;    
 }
-.cut{
-    top: 15px;
-    right: 20px;
-    position: fixed;
-    font-size: 30px;
-    font-family: sans-serif;
-    color: white;
-}
 
-.header{
-    /* background-image: linear-gradient(to left,#6435aa,  #3e236d); */
-    display: flex;
-    flex-direction: row;
-    height: 10vh;
-    align-items: center;
-    padding: 1vw;
-    width: 98.5vw;
-    margin-left: -1vw;
-    margin-top: -1vw;
-    position: fixed;
-    border-radius: 0px 0px 55px 60px;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-}
-.icon-container{
-    width: 6em;
-    height: 5em;
-    background-image: url('/static/icon/ShieldLogo.png');
-    background-size: contain; 
-    background-repeat: no-repeat;
-}
-.login-header{
-    width: 6vw;
-    padding: 2vmin;
-    border-radius: 100px;
-    background-color: #3e236d;
-    text-align: center;
-    font-weight: 900;
-}
-.header-first-part{
-    display: flex;
-    flex-grow: 1;
-    justify-content: space-evenly;
-    flex-flow: wrap;
-}
-.header-first-part span{
-    flex: 2;
-    justify-self: self-start;
-}
-.header .empty{
-    flex-grow: 2;
-}

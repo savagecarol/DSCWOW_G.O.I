@@ -10,21 +10,25 @@
     <script src="/static/js/index.js"></script>
 </head>
 <body>
-    <div class="container" style="display: none;">
+    <div class="container">
+        <div class="landing-cover-1"></div>
+
         <div class="header">
+            <div class="icon-container"></div>
             <div class="header-first-part"> 
-                <div class="icon-container"></div>
                 <span>FEATURES</span>
                 <span>ABOUT US</span>
                 <span>DEMO</span>
             </div>
-            <button class="login-google">Sign In</button>
+            <div class="empty"></div>
+            <span class="login-header" onclick="unfade('login-card',50)">Sign In</span>
         </div>
     </div>
 
-    <div id="login-card" class="container-login">
+    <div id="login-card" class="container-login" style="display: none;">
         <div class="curve">
         </div>
+        <span class="cut" onclick="fade('login-card',50)">X</span>
         <span class="text">G.O.I.</br></span>
         <div class="icon"></div>
         <span class="text-below">Guardinas Of Internet</span>
