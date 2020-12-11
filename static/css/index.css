@@ -1,6 +1,40 @@
 .body{
     
 }
+.landing-cover-1{
+    width: 100vw;
+    height: 200vh;
+    position: fixed;
+    top: -10vw;
+    left: -70vh;
+    transform: rotate(60deg);
+    /* background-color: #6435aa; */
+    background-image: linear-gradient(to left,#9150f1,#41236d);
+}
+.landing-cover-2{
+    width: 50vw;
+    height: 200vh;
+    position: fixed;
+    right: -30vh;
+    top: 5vh;
+    transform: rotate(240deg);
+    /* background-color: #1969ff; */
+    background-image: radial-gradient(#1969ff,#9150f1);
+}
+.landing-cover-3{
+    position: fixed;
+    width: 120vw;
+    height: 120vh;
+    margin: -10vmin;
+    background-color: #a66bfe;
+    z-index: -1;
+}
+.superman{
+    
+}
+
+
+
 .container-login{
     background-color: #938adf; 
     position: absolute;
