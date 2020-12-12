@@ -1,3 +1,9 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+
+from services.globals import *
+
+
 def remove_stopwords(text, stopwords):
     useful = [w for w in text if w not in stopwords]
     return useful
@@ -19,7 +25,7 @@ def getStem(review):
     return clean_review
 
 
-def check2(content):
+def check(content):
     df = pd.read_csv('df.csv')
     data = df.to_numpy()
     y = data[:, 1]

@@ -3,6 +3,10 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from guardians.serializers import IndexSerializer
+from services.status import check
+from services.summarizer import generate_summary
+
 
 def index(request):
     return render(request, 'index.html')
@@ -15,7 +19,7 @@ class IndexApi(APIView):
             file1 = open("text.txt", "w")
             file1.write(request.data)
             summary = generate_summary("text.txt")
-            imp = check2(request.data)
+            imp = check(request.data)
             ans = {}
             ans["status"] = imp
             ans["summary"] = summary

@@ -1,3 +1,10 @@
+import networkx as nx
+import numpy as np
+from nltk.cluster.util import cosine_distance
+
+from services.globals import *
+
+
 def read_article(file_name):
     file = open(file_name, "r", encoding="utf8")
     file_data = file.readlines()
