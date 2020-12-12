@@ -147,7 +147,7 @@ nav ul {
     padding: 1vw;
     width: 98.5vw;
     margin-left: -1vw;
-    margin-top: -1vw;
+    margin-top: 1vw;
     border-radius: 0px 0px 55px 60px;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -157,7 +157,7 @@ nav ul {
     position: fixed;
     background-image: linear-gradient(to left,#6435aa,  #3e236d);
     width: 220vw;
-    height: 15vh;
+    height: 18vh;
     margin-top: -1vw;
     margin-left: -1vw;
     border-radius: 0px 0px 55px 60px;   
@@ -204,4 +204,11 @@ nav ul {
     height: 100vh;
     padding-top: 10vh;
     padding-left: 2vw;
+}
+
+.about-us{
+    width: 100vw;
+    height: 80vh;
+    position: fixed;
+    top: 10vh;
 }
