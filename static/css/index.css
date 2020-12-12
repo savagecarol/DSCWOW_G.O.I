@@ -1,3 +1,6 @@
+a {
+    all: unset;
+}
 body {
     background-color: lightcoral;
 }
