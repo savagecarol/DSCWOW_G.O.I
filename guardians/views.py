@@ -5,3 +5,6 @@ def index(request):
 
 def team(request):
     return render(request, 'kartik.html')
+
+def input(request):
+    return render(request, 'input.html')
