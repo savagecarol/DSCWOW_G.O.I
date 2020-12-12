@@ -5,11 +5,7 @@ from nltk.cluster.util import cosine_distance
 from services.globals import *
 
 
-def read_article(file_name):
-    file = open(file_name, "r", encoding="utf8")
-    file_data = file.readlines()
-    str = ""
-    doc = str.join(file_data)
+def read_article(doc):
     doc = doc.replace('\n', '. ')
     doc = doc.split(". ")
     sentences = []
