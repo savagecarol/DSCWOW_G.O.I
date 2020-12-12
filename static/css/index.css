@@ -2,32 +2,34 @@
     
 }
 .landing-cover-1{
-    width: 100vw;
-    height: 200vh;
+    width: 1350px;
+    height: 1120px;
     position: fixed;
-    top: -10vw;
-    left: -70vh;
+    top: -135px;
+    left: -392px;
     transform: rotate(60deg);
     /* background-color: #6435aa; */
     background-image: linear-gradient(to left,#9150f1,#41236d);
+    z-index: -1;
 }
 .landing-cover-2{
-    width: 50vw;
-    height: 200vh;
+    width: 675px;
+    height: 1120px;
     position: fixed;
-    right: -30vh;
-    top: 5vh;
+    right: -168px;
+    top: 28px;
     transform: rotate(240deg);
     /* background-color: #1969ff; */
     background-image: radial-gradient(#1969ff,#9150f1);
+    z-index: -2;
 }
 .landing-cover-3{
     position: fixed;
-    width: 120vw;
-    height: 120vh;
-    margin: -10vmin;
+    width: 1620px;
+    height: 672px;
+    margin: -56px;
     background-color: #a66bfe;
-    z-index: -1;
+    z-index: -3;
 }
 .superman{
     
