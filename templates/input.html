@@ -10,7 +10,10 @@
 
     <title>Input</title>
     <style>
-        * {box-sizing: border-box}
+        * {
+            box-sizing: border-box;
+        }
+
         body {font-family: Verdana, sans-serif; margin:0}
 
         body {
@@ -23,74 +26,76 @@
         }
 
         .carousel-control-prev-icon, .carousel-control-next-icon {
-            background-color: blue;
+            /* background-color: blue; */
+        }
+
+        .nav {
+            /* margin: 6px; */
+            height: 600px;
+            background-color: white;
         }
 
         .pill-1 {
             background-color: #7c19a3;
             color: white;
             font-weight: bold;
-            text-align: center;
+            padding-left: 50px;
         }
 
         .pill-1:hover {
             background-color: #7c19a3;
             color: rgb(208, 206, 209);
             font-weight: bold;
-            text-align: center;
+            padding-left: 50px;
         }
 
         .pill-2 {
             background-color: #7c19a3;
             color: white;
             font-weight: bold;
-            text-align: center;
+            padding-left: 50px;
         }
 
         .pill-2:hover {
             background-color: #7c19a3;
             color: rgb(208, 206, 209);
             font-weight: bold;
-            text-align: center;
+            padding-left: 50px;
         }
 
         .pill-3 {
             background-color: #7c19a3;
             color: white;
             font-weight: bold;
-            text-align: center;
+            padding-left: 50px;
         }
 
         .pill-3:hover {
             background-color: #7c19a3;
             color: rgb(208, 206, 209);
             font-weight: bold;
-            text-align: center;
+            padding-left: 50px;
         }
 
         .pill-1.active {
             background-color: #3e236d;
             color: white;
             font-weight: bold;
-            text-align: center;
+            padding-left: 50px;
         }
 
         .pill-2.active {
             background-color: #3e236d;
             color: white;
             font-weight: bold;
-            text-align: center;
+            padding-left: 50px;
         }
 
         .pill-3.active {
             background-color: #3e236d;
             color: white;
             font-weight: bold;
-            text-align: center;
-        }
-
-        .pill-1.active, .pill-2.active, .pill-3.active, .pill-1, .pill-2, .pill-3 {
-            border-radius: 20px;
+            padding-left: 50px;
         }
 
         .submit-button {
@@ -121,25 +126,66 @@
         }
 
         .add-img {
-            width: 250px;
-            height: 250px;
-            margin: 7vh;
-            padding-left: 30vh;
-            padding-right: 35vh;
+            width: 100px;
+            height: 100px;
+            padding-left: 40vh;
+            padding-right: 50vh;
         }
+
+        .col-9 {
+            margin-right: -40px;
+        }
+
+        .tab-pane {
+            background-color: white;
+            height: 400px;
+            margin-bottom: 20px;
+        }
+
+        .tab-pane h1 {
+            padding: 20px;
+        }
+
+        .carousel-control-prev {
+            margin-left: -80px;
+        }
+
+        .carousel-control-next {
+            margin-right: -80px;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            height: 100px;
+            width: 100px;
+            outline: black;
+            background-size: 100%, 100%;
+            border-radius: 50%;
+            background-image: none;
+        }
+
+        .carousel-control-next-icon:after {
+            content: '>';
+            font-size: 55px;
+            color:red;
+        }
+
+        .carousel-control-prev-icon:after {
+            content: '<';
+            font-size: 55px;
+            color:red;
+        }
+
 
     </style>
   </head>
   <body>
-
-    <div class="container">
-        <div class="row"></div>
-        <div class="row mt-4">  
+        <div class="container-fluid">
+        <div class="row mt-2">  
         <div class="col-3">
             <div class="nav flex-column" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <a class="nav-link active pill-1 my-2" id="v-pills-home-tab" data-toggle="tab" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Insert Text</a>
-              <a class="nav-link pill-2 my-2" id="v-pills-profile-tab" data-toggle="tab" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Upload Image</a>
-              <a class="nav-link pill-3 my-2" id="v-pills-messages-tab" data-toggle="tab" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Result</a>
+              <a class="nav-link active pill-1" id="v-pills-home-tab" data-toggle="tab" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Insert Text <span class="float-right">></span></a>
+              <a class="nav-link pill-2" id="v-pills-profile-tab" data-toggle="tab" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Upload Image<span class="float-right">></span></a>
+              <a class="nav-link pill-3" id="v-pills-messages-tab" data-toggle="tab" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Result<span class="float-right">></span></a>
             </div>
           </div>
           <div class="col-9">
@@ -147,7 +193,7 @@
             <div class="tab-content" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
                 <div class="form-group">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="10"></textarea>
+                    <textarea class="form-control" placeholder="Enter Tern's & Conditions Here..." id="exampleFormControlTextarea1" rows="16"></textarea>
                 </div>
               </div>
               <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
@@ -170,7 +216,7 @@
                             <img src="/static/media/WorkingOnSystem.png" class="d-block w-100" alt="...">
                           </div>
                           <div class="carousel-item">
-                            <img src="/static/icon/addImageLogo.png" class="add-img d-block text-center w-100" alt="...">
+                            <img src="/static/icon/addImageLogo.png" class="add-img d-block w-100" alt="...">
                           </div>
                         </div>
                         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -185,16 +231,40 @@
                     
               </div>
               <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
-                  <h1>Result</h1>
+                  <h1 class="text-center text-dark">Result</h1>
+                  <ul class="text-dark">
+                      <li>
+                          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt natus qui nostrum maiores architecto. Laboriosam, iste pariatur natus ullam quia alias aut assumenda facilis eligendi, neque odit quidem ipsum. Optio!
+                      </li>
+                      <li>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam tenetur, omnis, illo iusto corrupti aliquam repellat, voluptatibus suscipit perferendis fuga nobis vero velit sint fugit consectetur earum accusamus exercitationem accusantium.
+                      </li>
+                      <li>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam tenetur, omnis, illo iusto corrupti aliquam repellat, voluptatibus suscipit perferendis fuga nobis vero velit sint fugit consectetur earum accusamus exercitationem accusantium.
+                      </li>
+                      <li>
+                          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam tenetur, omnis, illo iusto corrupti aliquam repellat, voluptatibus suscipit perferendis fuga nobis vero velit sint fugit consectetur earum accusamus exercitationem accusantium.
+                      </li>
+                  </ul>
               </div>
             </div>
             <div class="text-center">
                 <button class="submit-button btn" type="submit">Analyse</button>
             </div>
+            <script>
+                const source_element = document.getElementsByClassName('submit-button')
+                const element = document.getElementById('v-pills-messages')
+                if (element.classList.contains("active") && source_element.style.display == "block") {
+                    source_element.style.display ='none'
+                } else {
+                    source_element.style.display = 'block'
+                }
+            </script>
         </form>
           </div>
     </div>
     </div>
+    
 
 
     
