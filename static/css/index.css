@@ -1,6 +1,21 @@
-.body{
-    
+body {
+    background-color: lightcoral;
 }
+
+nav {
+    opacity: 0.8;
+}
+
+nav ul {
+    opacity: 1;
+    font-weight: bold;
+}
+
+.section-1 {
+    height: 100vw;
+    max-height: 100vw;
+}
+
 .landing-cover-1{
     width: 1350px;
     height: 1120px;
@@ -37,10 +52,6 @@
     height: 200vh;
     background-color: white;
 }
-.superman{
-    
-}
-
 
 
 .container-login{
