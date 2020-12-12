@@ -162,3 +162,9 @@
 .header .empty{
     flex-grow: 2;
 }
+
+
+.teams{
+    z-index: 99;
+    background-color: aquamarine;
+}

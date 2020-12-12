@@ -23,6 +23,7 @@ from guardians.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="home"),
+    path('about/',team)
 ]
 
 if settings.DEBUG:
