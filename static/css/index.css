@@ -10,7 +10,7 @@
     transform: rotate(60deg);
     /* background-color: #6435aa; */
     background-image: linear-gradient(to left,#9150f1,#41236d);
-    z-index: -1;
+    z-index: -2;
 }
 .landing-cover-2{
     width: 675px;
@@ -21,7 +21,7 @@
     transform: rotate(240deg);
     /* background-color: #1969ff; */
     background-image: radial-gradient(#1969ff,#9150f1);
-    z-index: -2;
+    z-index: -1;
 }
 .landing-cover-3{
     position: fixed;
@@ -30,6 +30,12 @@
     margin: -56px;
     background-color: #a66bfe;
     z-index: -3;
+}
+.landing-cover-white{
+    position: fixed;
+    width: 200vw;
+    height: 200vh;
+    background-color: white;
 }
 .superman{
     
@@ -121,8 +127,7 @@
     color: white;
 }
 
-.header{
-    /* background-image: linear-gradient(to left,#6435aa,  #3e236d); */
+.header-container{
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -135,6 +140,17 @@
     border-radius: 0px 0px 55px 60px;
     color: white;
     font-family: 'Montserrat', sans-serif;
+    z-index: 1000;
+}
+.header .background{
+    position: fixed;
+    background-image: linear-gradient(to left,#6435aa,  #3e236d);
+    width: 220vw;
+    height: 15vh;
+    margin-top: -1vw;
+    margin-left: -1vw;
+    border-radius: 0px 0px 55px 60px;   
+    z-index: 999;
 }
 .icon-container{
     width: 6em;
@@ -167,6 +183,10 @@
 
 
 .teams{
-    z-index: 99;
-    background-color: aquamarine;
+    background-color: transparent;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 10vh;
+    padding-left: 2vw;
 }
