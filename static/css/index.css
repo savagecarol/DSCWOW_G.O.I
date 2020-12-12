@@ -121,6 +121,7 @@
 
 .header{
     /* background-image: linear-gradient(to left,#6435aa,  #3e236d); */
+    position: fixed;
     display: flex;
     flex-direction: row;
     height: 10vh;
@@ -129,7 +130,6 @@
     width: 98.5vw;
     margin-left: -1vw;
     margin-top: -1vw;
-    position: fixed;
     border-radius: 0px 0px 55px 60px;
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -141,8 +141,8 @@
     background-size: contain; 
     background-repeat: no-repeat;
 }
-.login-header{
-    width: 6vw;
+.voice-header{
+    width: 10vw;
     padding: 2vmin;
     border-radius: 100px;
     background-color: #3e236d;
