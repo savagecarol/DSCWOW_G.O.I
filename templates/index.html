@@ -108,35 +108,35 @@
             text-shadow: 0 0 10px rgb(255, 255, 255);
         }
     </style>
-    <div class="carousal-container">
-        <span style="font-size: 60px;font-family: 'Montserrat', sans-serif;color: white;font-weight: bolder;" class="swipe"> < </span>
-        <div class="carousal-content">
-            <div class="center-carousal">
+    <div id="main-carousal-container" class="carousal-container">
+        <span style="font-size: 60px;font-family: 'Montserrat', sans-serif;color: white;font-weight: bolder;" class="swipe" onclick="changeLandingPageCarousal()"> < </span>
+        <div id="carousal-content" class="carousal-content">
+            <div  class="center-carousal">
                 <div class="text-area">
                     <div style="text-align: center;">
-                        <span class="small">
+                        <span id="text-big" class="small">
                             Daily Software Downloads
                         </span>
                     </div>    
                      </br>
                     <div style="text-align: center;">
-                        <span class="big">
-                            2.35 billion
+                        <span id="text-small" class="big">
+                            2.35 Billion
                         </span>
                     </div>
                 </div>
-                <div class="image-area">
-                    <img src="/static/media/DemoPreview.png" alt="">
+                <div  class="image-area">
+                    <img class="image-carousal" id="image" src="/static/media/DemoPreview.png" alt="">
                 </div>
             </div>
-            <div class="container-circles">
-                <div id="1" class="small-circles" style="box-shadow: 0 0 10px rgb(255, 255, 255);"></div>
-                <div id="2" class="small-circles"></div>
-                <div id="3" class="small-circles"></div>
-                <div id="4" class="small-circles"></div>
+            <div id="circles" class="container-circles">
+                <div class="small-circles" style="box-shadow: 0 0 10px rgb(255, 255, 255);"></div>
+                <div class="small-circles"></div>
+                <div class="small-circles"></div>
+                <div class="small-circles"></div>
             </div>
         </div>
-        <span class="swipe" style="font-size: 60px;font-family: 'Montserrat', sans-serif;color: white;font-weight: bolder;"> > </span>
+        <span class="swipe" style="font-size: 60px;font-family: 'Montserrat', sans-serif;color: white;font-weight: bolder;" onclick="changeLandingPageCarousal()"> > </span>
     </div>
         
     <div class="demo">
