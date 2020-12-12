@@ -27,7 +27,7 @@ function unfade(element,delay) {
 }
 
 function analyzeText(){
-    document.getElementById("loader").style.display = ""
+    // document.getElementById("loader").style.display = ""
     sendRequest(document.getElementById('textinput').value, "Text")
 }
 
@@ -126,7 +126,6 @@ function changeLandingPageCarousal(){
         if(index == 4){
             index = 0
         }
-        console.log(index)
         unfade(element.id,40)
 }
 
@@ -135,3 +134,56 @@ function carousalTimer(){
         changeLandingPageCarousal()
     }, 2000);
 }
+
+function analyzeText(){
+    // document.getElementById("loader").style.display = ""
+    sendRequest(document.getElementById('textinput').value, "Text")
+}
+
+function analyzeImage(){
+    // document.getElementById("loader").style.display = ""
+    document.getElementById("none").style.display = "none"
+    imageLoader = document.getElementById("imageLoader")
+    const reader = new FileReader()
+    reader.readAsDataURL(imageLoader.files[0])
+    reader.onload = function() {
+        console.log(reader.result)
+        document.getElementById("previewText").src = reader.result
+        Tesseract.recognize(reader.result).then(function (result){ 
+    
+            alert(result.text)    
+            sendRequest(result.text,"Image")
+
+        })
+    }
+
+    reader.onerror = function() {
+        console.log(reader.error);
+    };
+    
+
+}
+
+function sendRequest(value,callBy){
+    var http = new XMLHttpRequest();
+    var url = '/api/index';
+    var returnValue = ""
+
+    var params = '{"content":"'+value+'"}';
+    http.open('POST', url, true);
+
+    //Send the proper header information along with the request
+    http.setRequestHeader('Content-type', 'application/json');
+
+    http.onreadystatechange = function() {//Call a function when the state changes.
+        if(http.readyState == 4 && http.status == 200) {
+            // callbackCheckYesOrNo(http.responseText,callBy)
+            // console.log(http.responseText)
+            // console.log(params)
+            console.log("hello world")
+        }
+    }
+    http.send(params);
+
+}
+

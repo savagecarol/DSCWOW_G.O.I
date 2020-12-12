@@ -213,14 +213,17 @@
             <div class="tab-content" id="v-pills-tabContent">
               <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" style="box-shadow: 0 0 20px black; border-radius: 25px;">
                 <div class="form-group">
-                    <textarea class="form-control" placeholder="Enter Term's & Conditions Here..." id="exampleFormControlTextarea1"  rows="16" style="all:unset; padding: 30px"></textarea>
+                    <textarea class="form-control" placeholder="Enter Term's & Conditions Here..." id="exampleFormControlTextarea1"  rows="16" style="border-radius: 25px;width: 100%;padding: 30px" wrap="hard"></textarea>
                 </div>
               </div>
               <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" style="box-shadow: 0 0 20px black; border-radius: 25px;">
                
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                          <div class="carousel-item active">
-                                <img id="data-image" src="/static/media/cyber_security_header.png" class="d-block w-100" alt="..." on>
+                          <div class="carousel-item active" style="padding-left: 28vw;padding-top: 3vh;">
+                            <label for="imageUpload">
+                                <input type="file" name="image" id="imageUpload" style="display:none;"/>
+                                <img id="data-image" src="/static/media/add_photo-512.png" class="d-block w-100" alt="...">
+                            </label>
                           </div>
                     </div>
                     
