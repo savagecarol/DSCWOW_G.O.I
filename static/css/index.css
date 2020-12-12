@@ -159,11 +159,11 @@ nav ul {
 .header .background{
     position: fixed;
     background-image: linear-gradient(to left,#6435aa,  #3e236d);
-    width: 220vw;
+    width: 101vw;
     height: 18vh;
     margin-top: -1vw;
     margin-left: -1vw;
-    border-radius: 0px 0px 55px 60px;   
+    border-radius: 0px 0px 55px 0px;   
     z-index: 999;
 }
 .icon-container{
