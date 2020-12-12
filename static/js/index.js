@@ -71,7 +71,7 @@ function callbackCheckYesOrNo(response,callBy){
 
         console.log('Yes')
     }
-    
+
     else{
 
         result = "These Terms And Conditions Does Not Sound.. </br> The App Can't Used.."
@@ -97,7 +97,46 @@ function callbackCheckYesOrNo(response,callBy){
     applyColorArray('Result',70)
 }
 
+var index = 1;
 
 
+function changeLandingPageCarousal(){
+        element = document.getElementById("carousal-content")
+        fade(element.id,20)
+        if(index==0){
+            element.getElementsByClassName("container-circles")[0].getElementsByClassName("small-circles")[0].style = ""
+            element.getElementsByClassName("container-circles")[0].getElementsByClassName("small-circles")[1].style = ""
+            element.getElementsByClassName("container-circles")[0].getElementsByClassName("small-circles")[2].style = ""
+            element.getElementsByClassName("container-circles")[0].getElementsByClassName("small-circles")[3].style = ""
+            element.getElementsByClassName("big")[0].style = ""
+            document.getElementById("main-carousal-container").style = "";     
+        }
+        textSmall=["Daily Software Downloads","Who Reads Conditions","Who Lose Privacy","Let Us Guardians Save Privacy"]
+        textBig=["2.35 Billion","0.00 Billion","2.35+ Billion","--^ Swipe Up ^--"]
+        image=["/static/media/DemoPreview.png","/static/media/workingOnPhone.png","/static/media/LockAndCybersec.png","/static/media/WorkingOnSystem.png"]
+        if(index==3){
+            element.getElementsByClassName("big")[0].style = "font-size: 60px;"
+            document.getElementById("main-carousal-container").style = "background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 1));";     
+        } 
+        element.getElementsByClassName("big")[0].textContent = textBig[index]
+        element.getElementsByClassName("small")[0].textContent = textSmall[index]
+        element.getElementsByClassName("image-carousal")[0].src = image[index]
+        element.getElementsByClassName("container-circles")[0].getElementsByClassName("small-circles")[index].style = "box-shadow: 0 0 10px rgb(255, 255, 255);"
+        index = index + 1;
+        if(index == 4){
+            index = 0
+        }
+        console.log(index)
+        unfade(element.id,20)
+}
 
-
+function carousalTimer(){
+    var timer = setInterval(function () {
+        fade(element);
+        changeLandingPageCarousal(index)
+        unfade(element)
+        if(index==3){
+            index = 0
+        }
+    }, 1000);
+}
