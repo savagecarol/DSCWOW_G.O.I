@@ -15,6 +15,8 @@ class IndexApi(APIView):
     def post(self, request, *args, **kwargs):
         serializer = IndexSerializer(data=request.data)
         if serializer.is_valid():
+            file1 = open("text.txt", "w")
+            file1.write(request.data)
             summary = generate_summary("text.txt")
             imp = check2(request.data)
             ans = {}
