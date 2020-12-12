@@ -1,0 +1,1 @@
+Quick fix, comment out the 'rest_framework.renders.DjangoModelPermissions' line for now -- if you are following the DRF Tutorial 2; and perhaps you had added that in settings.py during the homepage example.

@@ -17,9 +17,9 @@ class IndexApi(APIView):
         serializer = IndexSerializer(data=request.data)
         if serializer.is_valid():
             file1 = open("text.txt", "w")
-            file1.write(request.data)
+            file1.write(request.data['content'])
             summary = generate_summary("text.txt")
-            imp = check(request.data)
+            imp = check(request.data['content'])
             ans = {}
             ans["status"] = imp
             ans["summary"] = summary
