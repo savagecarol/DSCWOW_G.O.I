@@ -1,5 +1,7 @@
 a {
     all: unset;
+    font-weight: bold;
+     color: white;
 }
 body {
     background-color: lightcoral;
