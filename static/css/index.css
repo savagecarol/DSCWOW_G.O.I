@@ -15,3 +15,167 @@ nav ul {
     height: 100vw;
     max-height: 100vw;
 }
+
+.landing-cover-1{
+    width: 100vw;
+    height: 200vh;
+    position: fixed;
+    top: -10vw;
+    left: -70vh;
+    transform: rotate(60deg);
+    /* background-color: #6435aa; */
+    background-image: linear-gradient(to left,#9150f1,#41236d);
+}
+.landing-cover-2{
+    width: 50vw;
+    height: 200vh;
+    position: fixed;
+    right: -30vh;
+    top: 5vh;
+    transform: rotate(240deg);
+    /* background-color: #1969ff; */
+    background-image: radial-gradient(#1969ff,#9150f1);
+}
+.landing-cover-3{
+    position: fixed;
+    width: 120vw;
+    height: 120vh;
+    margin: -10vmin;
+    background-color: #a66bfe;
+    z-index: -1;
+}
+
+
+.container-login{
+    background-color: #938adf; 
+    position: absolute;
+    width: 340px;
+    height: 520px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 0 20px #29154d;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+} 
+
+.curve{
+    margin-left: -260px;
+    margin-top: -460px;
+    width: 1050px;
+    height: 850px;
+    background-color: #3e236d;
+    border-radius: 100%;
+    box-shadow: 0 0 5px #29154d;
+}
+
+.login-google{
+    all: unset;
+    background-color: #3e236d;
+    width: 300px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 100px;
+    color: white;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+.login-google:hover{
+    box-shadow: 0 0 20px #29154d;
+}
+
+.text  {
+    z-index: 3;
+    position: fixed;
+    top: 230px;
+    width: 350px;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.text-below  {
+    z-index: 3;
+    position: fixed;
+    top: 280px;
+    width: 350px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.icon{
+    z-index: 3;
+    position: fixed;
+    top: 90px;
+    margin-left: 85px;
+    border-radius: 100px;
+    width: 180px;
+    height: 150px;
+    text-align: center;
+    font-size: 20px;
+    background-image: url('/static/icon/ShieldLogo.png');
+    background-size: contain;    
+}
+.cut{
+    top: 15px;
+    right: 20px;
+    position: fixed;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.header{
+    /* background-image: linear-gradient(to left,#6435aa,  #3e236d); */
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    height: 10vh;
+    align-items: center;
+    padding: 1vw;
+    width: 98.5vw;
+    margin-left: -1vw;
+    margin-top: -1vw;
+    border-radius: 0px 0px 55px 60px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.icon-container{
+    width: 6em;
+    height: 5em;
+    background-image: url('/static/icon/ShieldLogo.png');
+    background-size: contain; 
+    background-repeat: no-repeat;
+}
+.voice-header{
+    width: 10vw;
+    padding: 2vmin;
+    border-radius: 100px;
+    background-color: #3e236d;
+    text-align: center;
+    font-weight: 900;
+}
+.header-first-part{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    flex-flow: wrap;
+}
+.header-first-part span{
+    flex: 2;
+    justify-self: self-start;
+}
+.header .empty{
+    flex-grow: 2;
+}
+
+
+.teams{
+    z-index: 99;
+    background-color: aquamarine;
+}

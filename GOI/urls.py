@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index, name="home"),
     path('api/index', IndexApi.as_view(), name="home_api"),
+    path('about/',team),
+    path('input/',inpute)
 ]
 
 if settings.DEBUG:
