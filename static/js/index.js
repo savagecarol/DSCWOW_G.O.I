@@ -102,7 +102,7 @@ var index = 1;
 
 function changeLandingPageCarousal(){
         element = document.getElementById("carousal-content")
-        fade(element.id,20)
+        fade(element.id,40)
         if(index==0){
             element.getElementsByClassName("container-circles")[0].getElementsByClassName("small-circles")[0].style = ""
             element.getElementsByClassName("container-circles")[0].getElementsByClassName("small-circles")[1].style = ""
@@ -127,16 +127,11 @@ function changeLandingPageCarousal(){
             index = 0
         }
         console.log(index)
-        unfade(element.id,20)
+        unfade(element.id,40)
 }
 
 function carousalTimer(){
     var timer = setInterval(function () {
-        fade(element);
-        changeLandingPageCarousal(index)
-        unfade(element)
-        if(index==3){
-            index = 0
-        }
-    }, 1000);
+        changeLandingPageCarousal()
+    }, 2000);
 }
