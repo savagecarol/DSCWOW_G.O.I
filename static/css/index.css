@@ -173,9 +173,13 @@
     justify-content: space-evenly;
     flex-flow: wrap;
 }
-.header-first-part span{
+.header-first-part div{
     flex: 2;
     justify-self: self-start;
+}
+.header-first-part div span{
+    border-radius: 5px;
+    padding-bottom: 3px;
 }
 .header .empty{
     flex-grow: 2;
