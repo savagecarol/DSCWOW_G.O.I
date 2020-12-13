@@ -23,6 +23,8 @@ function unloader(){
         op = op + 0.1;
     }, 10);
     document.getElementById("loader-container").style.display = "none"   
+    document.getElementById("text-update").textContent = "Reading Data...."
+    
 }
 
 function fade(element,delay){
@@ -110,7 +112,7 @@ function analyzeImage(){
         Tesseract.recognize(reader.result).then(function (result){
 
             sendRequest(result.data.text)
-            document.getElementById("text-update").textContent = "Image TO Text Done....Sending Data...."
+            document.getElementById("text-update").textContent = "Image To Text Done....     Sending Data...."
 
         })
     }
