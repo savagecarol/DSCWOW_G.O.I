@@ -213,6 +213,10 @@
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
         }
+
+        .header-first-part div span a {
+            color: white;
+        }
         
         /* Loader */
 
@@ -229,7 +233,7 @@
         <div class="header-container">
             <div class="icon-container"></div>
             <div class="header-first-part">
-                <div><span><a style="all: unset;" href="/"> FEATURES </a></span></div>
+                <div><span><a style="all: unset;" href="/"> HOME </a></span></div>
                 <div><span style="  border-bottom: 5px solid #a66bfe;"><a style="all: unset;" href="/input"> ANALYSER </a></span></div>
                 <div><span><a style="all: unset;" href="/about"> ABOUT US </a></span></div>
             </div>
@@ -261,9 +265,12 @@
               <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" style="box-shadow: 0 0 20px black; border-radius: 25px;">
                 <div class="form-group">
                     <textarea class="form-control" placeholder="Enter Term's & Conditions Here..." id="textInput"  rows="16" style="border-radius: 25px;width: 100%;padding: 30px" wrap="hard"></textarea>
-                    <div class="text-center" style="margin-top:-7vh;">
-                        <span id="remove-button" class="submit-button btn" onclick="analyzeText()">Analyse</span>
-                    </div>    
+                    <!-- <div class="text-center">
+                        <span id="remove-button" class="submit-button btn" style="margin-top: 100px; display: block;" onclick="analyzeText()">Analyse</span>
+                    </div>     -->
+                    <div class="text-center">
+                        <span id="remove-button-msg" class="submit-button btn" onclick="analyzeText()">Analyse</span>
+                    </div>
                 </div>
               </div>
               <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" style="box-shadow: 0 0 20px black; border-radius: 25px;">

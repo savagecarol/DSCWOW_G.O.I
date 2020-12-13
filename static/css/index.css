@@ -196,6 +196,11 @@ nav ul {
 .header-first-part div span{
     border-radius: 5px;
     padding-bottom: 3px;
+    color: white;
+}
+
+.header-first-part div span a:hover {
+    color: rgb(195, 125, 236);
 }
 .header .empty{
     flex-grow: 2;
