@@ -1,3 +1,30 @@
+function loader(){
+    var body = document.getElementById("body-container")
+    var op = 1
+    var timer = setInterval(function () {
+        if (op <= 0.4){
+            clearInterval(timer);
+            document.getElementById("loader-container").style.display = "flex"
+        }
+        body.style.opacity = op;
+        op = op - 0.1;
+    }, 10);
+}
+
+function unloader(){
+    console.log("unloader")
+    var body = document.getElementById("body-container")
+    body.style.opacity = 1;
+    var timer = setInterval(function () {
+        if (op > 1){
+            clearInterval(timer);
+        }
+        body.style.opacity = op;
+        op = op + 0.1;
+    }, 10);
+    document.getElementById("loader-container").style.display = "none"   
+}
+
 function fade(element,delay){
     
     element = document.getElementById(element)
@@ -66,24 +93,24 @@ function carousalTimer(){
 
 function analyzeText(){
     // document.getElementById("loader").style.display = ""
+    document.getElementById("text-update").textContent = "Sending Data...."
+    loader()
     sendRequest(document.getElementById('textInput').value, "Text")
 }
 
 function analyzeImage(){
-    // document.getElementById("loader").style.display = ""
-    // document.getElementById("none").style.display = "none"
+    loader()
+    console.log("Image Analysis")
     imageLoader = document.getElementById("imageLoader")
     const reader = new FileReader()
     reader.readAsDataURL(imageLoader.files[0])
     reader.onload = function() {
         console.log(reader.result)//background-image
-        document.getElementById("data-image").src = ""
         document.getElementById("v-pills-profile").style.backgroundImage = "url("+reader.result+")"
         Tesseract.recognize(reader.result).then(function (result){
 
-            console.log(result)
-            alert(result.data.text)    
             sendRequest(result.data.text)
+            document.getElementById("text-update").textContent = "Image TO Text Done....Sending Data...."
 
         })
     }
@@ -128,8 +155,8 @@ function sendRequest(value,callBy){
             active.className = activeClass
             document.getElementsByClassName("nav-link pill-3")[0].className = "nav-link pill-3 active"
 
-            document.getElementById("remove-button-msg").outerHTML = "<span id=\"remove-button-msg\" class=\"submit-button btn\" onclick=\"uploadNewImage()\">Upload New Image</span>"
-            
+            document.getElementById("remove-button-msg").outerHTML = "<span id=\"remove-button-msg\" class=\"submit-button btn\" onclick=\"uploadNewImage()\">Upload New Content</span>"
+            unloader()    
         }
     }
     http.send(params);
@@ -178,6 +205,7 @@ function callbackCheckYesOrNo(response,callBy){
     active.className = activeClass
     document.getElementsByClassName("nav-link pill-3")[0].className = "nav-link pill-3 active"
 
+    unloader()
 }
 
 
