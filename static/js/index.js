@@ -150,6 +150,9 @@ function sendRequest(value,callBy){
             document.getElementById("v-pills-messages").style.color = "white"
             document.getElementById("result-show-status").innerHTML = "Result  :   Could Not Process Data"
             document.getElementById("output-result").textContent = "Please, Upload Another Image/Text ....."
+            
+            document.getElementById("remove-button-msg").outerHTML = "<span id=\"remove-button-msg\" class=\"submit-button btn\" onclick=\"uploadNewImage()\">Upload New Content</span>"
+            
 
             document.getElementsByClassName("show active")[0].className = "tab-pane fade"
             document.getElementById("v-pills-messages").className = "tab-pane fade show active"
@@ -157,8 +160,6 @@ function sendRequest(value,callBy){
             var activeClass = active.classList[0] +" "+ active.classList[1]
             active.className = activeClass
             document.getElementsByClassName("nav-link pill-3")[0].className = "nav-link pill-3 active"
-
-            document.getElementById("remove-button-msg").outerHTML = "<span id=\"remove-button-msg\" class=\"submit-button btn\" onclick=\"uploadNewImage()\">Upload New Content</span>"
             unloader()    
         }
     }
@@ -197,7 +198,7 @@ function callbackCheckYesOrNo(response,callBy){
         document.getElementById("v-pills-messages").style.color = "white"
         document.getElementById("result-show-status").innerHTML = "Result  :  The Software Is Unsafe For Use"
     }
-    document.getElementById("remove-button-msg").outerHTML = "<span id=\"remove-button\" class=\"submit-button btn\" onclick=\"window.location.reload()\">Refresh Page</span>"
+    document.getElementById("remove-button-msg").outerHTML = "<span id=\"remove-button-msg\" class=\"submit-button btn\" onclick=\"window.location.reload()\">Refresh Page</span>"
     document.getElementById("remove-button").outerHTML = "<span id=\"remove-button\" class=\"submit-button btn\" onclick=\"window.location.reload()\">Refresh Page</span>"
     document.getElementById("imageLoader").outerHTML = "<input type=\"file\" name=\"image\" id=\"imageLoader\" style=\"display:none;\" onchange=\"window.location.reload()\">"
     
