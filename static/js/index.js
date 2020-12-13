@@ -71,7 +71,7 @@ function changeLandingPageCarousal(){
             document.getElementById("main-carousal-container").style = "";     
         }
         textSmall=["Daily Software Downloads","Who Reads Conditions","Who Lose Privacy","Let Us Guardians Save Privacy"]
-        textBig=["2.35 Billion","0.00 Billion","2.35+ Billion","--^ Swipe Up ^--"]
+        textBig=["2.35 Billion","0.00 Billion","2.35+ Billion","Be Safe"]
         image=["/static/media/DemoPreview.png","/static/media/workingOnPhone.png","/static/media/LockAndCybersec.png","/static/media/WorkingOnSystem.png"]
         if(index==3){
             element.getElementsByClassName("big")[0].style = "font-size: 60px;"
