@@ -15,6 +15,7 @@ function unloader(){
     console.log("unloader")
     var body = document.getElementById("body-container")
     body.style.opacity = 1;
+    op = 0.4
     var timer = setInterval(function () {
         if (op > 1){
             clearInterval(timer);
