@@ -26,7 +26,7 @@ class IndexApi(APIView):
             summary = generate_summary(request.data['content'])
             imp = check(request.data['content'])
             ans = {}
-            ans["status"] = imp
+            ans["status"] = imp[0]
             ans["summary"] = summary
             return Response(ans, status=status.HTTP_200_OK)
         return Response(serializer.errors, status.HTTP_400_BAD_REQUEST)
