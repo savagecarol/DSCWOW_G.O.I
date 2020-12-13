@@ -140,7 +140,7 @@ function sendRequest(value,callBy){
     //Send the proper header information along with the request
     http.setRequestHeader('Content-type', 'application/json')
 
-    http.onreadystatechange = function() {//Call a function when the state changes.
+    http.onreadystatechange = function() {
         if(http.readyState == 4 && http.status == 200) {
             var output = JSON.parse(http.responseText);
             callbackCheckYesOrNo(output)
@@ -197,7 +197,7 @@ function callbackCheckYesOrNo(response,callBy){
         document.getElementById("v-pills-messages").style.color = "white"
         document.getElementById("result-show-status").innerHTML = "Result  :  The Software Is Unsafe For Use"
     }
-    document.getElementById("remove-button").innerHTML = "Refresh Page"
+    document.getElementById("remove-button-msg").outerHTML = "<span id=\"remove-button\" class=\"submit-button btn\" onclick=\"window.location.reload()\">Refresh Page</span>"
     document.getElementById("remove-button").outerHTML = "<span id=\"remove-button\" class=\"submit-button btn\" onclick=\"window.location.reload()\">Refresh Page</span>"
     document.getElementById("imageLoader").outerHTML = "<input type=\"file\" name=\"image\" id=\"imageLoader\" style=\"display:none;\" onchange=\"window.location.reload()\">"
     
