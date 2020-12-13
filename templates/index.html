@@ -18,6 +18,21 @@
     <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
 </head>
 <body onload="carousalTimer()">
+    <script>
+        function speak() {
+            let msg = "Meet our team"
+                
+                let speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-US";
+                
+                speech.text = msg;
+                speech.volume = 1;
+                speech.rate = 1;
+                speech.pitch = 1;
+                
+                window.speechSynthesis.speak(speech);
+        }
+    </script>
     <div class="header">
         <div class="background" style="opacity: 0;"></div>  
         <div class="header-container">

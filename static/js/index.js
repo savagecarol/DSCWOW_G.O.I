@@ -89,6 +89,17 @@ function changeLandingPageCarousal(){
 }
 
 function carousalTimer(){
+        let msg = "We are Gaurdians of Internet"
+            
+            let speech = new SpeechSynthesisUtterance();
+            speech.lang = "en-US";
+            
+            speech.text = msg;
+            speech.volume = 1;
+            speech.rate = 1;
+            speech.pitch = 1;
+            
+            window.speechSynthesis.speak(speech);
     var timer = setInterval(function () {
         changeLandingPageCarousal()
     }, 2000);
@@ -192,12 +203,34 @@ function callbackCheckYesOrNo(response,callBy){
     if(response.status === "Yes"){
         document.getElementById("v-pills-messages").style.color = "white"
         document.getElementById("v-pills-messages").style.backgroundColor = "green"
-        document.getElementById("result-show-status").innerHTML = "Result  :  The Software Is Safe For Use"
+        document.getElementById("result-show-status").innerHTML = "Result  :  This Software Is Safe"
+            let msg = "This Software is Safe"
+                
+                let speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-US";
+                
+                speech.text = msg;
+                speech.volume = 1;
+                speech.rate = 1;
+                speech.pitch = 1;
+                
+                window.speechSynthesis.speak(speech);
     }
     else{
         document.getElementById("v-pills-messages").style.backgroundColor = "red"
         document.getElementById("v-pills-messages").style.color = "white"
-        document.getElementById("result-show-status").innerHTML = "Result  :  The Software Is Unsafe For Use"
+        document.getElementById("result-show-status").innerHTML = "Result  :  This Software Is Unsafe"
+        let msg = "This Software is Unsafe"
+                
+                let speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-US";
+                
+                speech.text = msg;
+                speech.volume = 1;
+                speech.rate = 1;
+                speech.pitch = 1;
+                
+                window.speechSynthesis.speak(speech);
     }
     document.getElementById("remove-button-msg").outerHTML = "<span id=\"remove-button-msg\" class=\"submit-button btn\" onclick=\"window.location.reload()\">Refresh Page</span>"
     document.getElementById("remove-button").outerHTML = "<span id=\"remove-button\" class=\"submit-button btn\" style=\"display: 'block'\" onclick=\"window.location.reload()\">Refresh Page</span>"

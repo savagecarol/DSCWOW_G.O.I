@@ -222,7 +222,22 @@
 
     </style>
   </head>
-  <body>
+  <body onload="speak()">
+    <script>
+        function speak() {
+            let msg = "Let's Analyze"
+                
+                let speech = new SpeechSynthesisUtterance();
+                speech.lang = "en-US";
+                
+                speech.text = msg;
+                speech.volume = 1;
+                speech.rate = 1;
+                speech.pitch = 1;
+                
+                window.speechSynthesis.speak(speech);
+        }
+    </script>
       <div id="loader-container" class="loader-container">
         <div class="loader" id="loader" style=""></div>
         <span class="text-update" id="text-update">Reading Text...</span>
