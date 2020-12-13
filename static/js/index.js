@@ -152,6 +152,7 @@ function sendRequest(value,callBy){
             document.getElementById("output-result").textContent = "Please, Upload Another Image/Text ....."
             
             document.getElementById("remove-button-msg").outerHTML = "<span id=\"remove-button-msg\" class=\"submit-button btn\" onclick=\"uploadNewImage()\">Upload New Content</span>"
+            // document.getElementById("remove-button").outerHTML = "<span id=\"remove-button\" class=\"submit-button btn\" onclick=\"window.location.reload()\">Refresh Page</span>"
             
 
             document.getElementsByClassName("show active")[0].className = "tab-pane fade"
@@ -199,7 +200,7 @@ function callbackCheckYesOrNo(response,callBy){
         document.getElementById("result-show-status").innerHTML = "Result  :  The Software Is Unsafe For Use"
     }
     document.getElementById("remove-button-msg").outerHTML = "<span id=\"remove-button-msg\" class=\"submit-button btn\" onclick=\"window.location.reload()\">Refresh Page</span>"
-    document.getElementById("remove-button").outerHTML = "<span id=\"remove-button\" class=\"submit-button btn\" onclick=\"window.location.reload()\">Refresh Page</span>"
+    document.getElementById("remove-button").outerHTML = "<span id=\"remove-button\" class=\"submit-button btn\" style=\"display: 'block'\" onclick=\"window.location.reload()\">Refresh Page</span>"
     document.getElementById("imageLoader").outerHTML = "<input type=\"file\" name=\"image\" id=\"imageLoader\" style=\"display:none;\" onchange=\"window.location.reload()\">"
     
     document.getElementsByClassName("show active")[0].className = "tab-pane fade"
